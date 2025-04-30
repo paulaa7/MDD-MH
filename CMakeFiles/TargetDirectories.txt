@@ -1,0 +1,3 @@
+/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles/main.dir
+/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles/edit_cache.dir
+/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles/rebuild_cache.dir

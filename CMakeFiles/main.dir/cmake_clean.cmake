@@ -1,0 +1,28 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/link.d"
+  "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/main.cpp.o.d"
+  "CMakeFiles/main.dir/src/AGG_posicion.cpp.o"
+  "CMakeFiles/main.dir/src/AGG_posicion.cpp.o.d"
+  "CMakeFiles/main.dir/src/AGG_uniforme.cpp.o"
+  "CMakeFiles/main.dir/src/AGG_uniforme.cpp.o.d"
+  "CMakeFiles/main.dir/src/MDD.cpp.o"
+  "CMakeFiles/main.dir/src/MDD.cpp.o.d"
+  "CMakeFiles/main.dir/src/brutesearch.cpp.o"
+  "CMakeFiles/main.dir/src/brutesearch.cpp.o.d"
+  "CMakeFiles/main.dir/src/greedy.cpp.o"
+  "CMakeFiles/main.dir/src/greedy.cpp.o.d"
+  "CMakeFiles/main.dir/src/localsearch_rand.cpp.o"
+  "CMakeFiles/main.dir/src/localsearch_rand.cpp.o.d"
+  "CMakeFiles/main.dir/src/pincrem.cpp.o"
+  "CMakeFiles/main.dir/src/pincrem.cpp.o.d"
+  "CMakeFiles/main.dir/src/randomsearch.cpp.o"
+  "CMakeFiles/main.dir/src/randomsearch.cpp.o.d"
+  "main"
+  "main.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/main.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

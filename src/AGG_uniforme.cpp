@@ -1,0 +1,229 @@
+#include <cassert>
+#include <AGG_uniforme.h>
+#include <mh.h>
+#include <unordered_set>
+#include <set>
+#include <iostream>
+
+using namespace std;
+
+/**
+ * @param problem The problem to be optimized
+ * @param maxevals Maximum number of evaluations allowed
+ * @return A pair containing the best solution found and its fitness
+ */
+  
+  template <class T> void print_vector(string name, const vector<T> &sol) {
+    cout << name << ": ";
+  
+    for (auto elem : sol) {
+      cout << elem << ", ";
+    }
+    cout << endl;
+  }
+  
+  template <class T> void print_vector2(string name, const vector<T> &sol) {
+    cout << name << ": ";
+  
+    for (auto elem : sol) {
+      cout << "(" << elem.first << ", " << elem.second << "), ";
+    }
+    cout << endl;
+  }
+
+  void AGG_uniforme::reparar(const int num_nodos, vector<bool> &hijo) {
+    if (num_nodos == 0) return;
+
+    else if (num_nodos > 0) {
+      size_t pos = 0;
+
+      for (int i = num_nodos; i > 0; i --) {
+        while (!hijo[pos])
+          pos = Random::get<size_t>(0, hijo.size()-1);
+
+        hijo[pos] = false;
+      }
+    }
+
+    else {
+      size_t pos = 0;
+
+      for (int i = num_nodos; i < 0; i ++) {
+        while (hijo[pos])
+          pos = Random::get<size_t>(0, hijo.size()-1);
+        
+        hijo[pos] = true;
+      }
+    }
+  }
+
+  void AGG_uniforme::cruce_uniforme(const tSolution& padre1, const tSolution& padre2, 
+                                    vector<tSolution> &poblacion_nueva) {
+    //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
+    vector<bool> p1 (n, false);
+    vector<bool> p2 (n, false);
+    vector<bool> h1 (n, false);
+    vector<bool> h2 (n, false);
+    tSolution hijo1, hijo2;
+
+    bool hijo_a_elegir;
+    int tam = padre1.size();
+
+    //inicialización de padres
+    for (size_t i = 0; i < tam; i ++) {
+      p1[padre1[i]] = true;
+      p2[padre2[i]] = true;
+    }
+
+    //asignación de valores a los hijos
+    for (size_t i = 0; i < n; i ++) {
+      //los valores comunes se mantienen en ambos
+      if (p2[i] == p1[i]) h1[i] = h2[i] = p2[i];
+      
+      else { //el resto se dividen de forma aleatoria
+        hijo_a_elegir = Random::get<bool>();
+
+        if (hijo_a_elegir) { h1[i] = p1[i]; h2[i] = p2[i];}
+        else               { h2[i] = p1[i]; h1[i] = p2[i];}
+      }
+    }
+
+    //reparación
+    int num_nodos_hijo1=0, num_nodos_hijo2=0;
+    for (size_t i=0; i<n; i++) {
+      num_nodos_hijo1 += (h1[i] - p1[i]);
+      num_nodos_hijo2 += (h2[i] - p1[i]);
+    }
+
+    reparar(num_nodos_hijo1, h1);
+    reparar(num_nodos_hijo2, h2);
+
+    for (size_t i = 0; i < n; i ++) {
+      if (h1[i])  hijo1.push_back(i);
+      if (h2[i])  hijo2.push_back(i);
+    }
+
+    poblacion_nueva.push_back(hijo1);
+    poblacion_nueva.push_back(hijo2);
+  }
+
+  void AGG_uniforme::mutar(tSolution &cromosoma) {
+    set<size_t> posibles;
+    for (size_t i = 0; i < n; i ++) posibles.insert(i);
+    for (size_t i = 0; i < cromosoma.size(); i ++) posibles.erase(cromosoma[i]);
+
+    size_t a_cambiar = Random::get<size_t>(0,cromosoma.size()-1);
+    size_t pos_nuevo_valor = Random::get<size_t>(0,posibles.size()-1);
+
+    auto it = posibles.begin();
+    advance(it, pos_nuevo_valor);
+
+    cromosoma[a_cambiar] = *it;
+  }
+  
+  ResultMH AGG_uniforme::optimize(Problem *problem, int maxevals){
+    assert(maxevals > 0);
+    size_t evals = 0;
+  
+    //n y m
+    m = problem->getSolutionSize();
+    n = problem->getSolutionDomainRange().second + 1;
+  
+    //solution
+    vector<tSolution> poblacion;
+    vector<tSolution> poblacion_sel;
+    vector<tSolution> poblacion_nueva;
+
+    tSolution peor_sol;
+    size_t peor_sol_index;
+    tSolution mejor_sol;
+    tSolution mejor_sol_ant;
+    tFitness fitness;
+
+    tSolution solution;
+    solution = problem->createSolution();
+    poblacion.push_back(solution);
+
+    peor_sol = mejor_sol = mejor_sol_ant = solution;
+
+    for (size_t i=1; i<50; i++){
+        solution = problem->createSolution();
+        poblacion.push_back(solution);
+
+        if (problem->fitness(solution) < problem->fitness(mejor_sol)) mejor_sol = solution;
+        if (problem->fitness(solution) > problem->fitness(peor_sol)) {
+          peor_sol = solution; 
+          peor_sol_index = i;
+        }
+    }
+
+    for (; evals < maxevals; evals += 50) {
+        poblacion_sel.clear();
+        poblacion_nueva.clear();
+        poblacion_sel.reserve(50);
+        poblacion_nueva.reserve(50);
+
+        //selección
+        tSolution sol1, sol2;
+        size_t pos_aux1, pos_aux2;
+        for (size_t i=0; i<poblacion.size(); i++) {
+          pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
+          pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
+
+          if (problem->fitness(poblacion[pos_aux2]) < problem->fitness(poblacion[pos_aux1]))
+              pos_aux1 = pos_aux2;
+
+          pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
+
+          if (problem->fitness(poblacion[pos_aux2]) < problem->fitness(poblacion[pos_aux1]))
+              poblacion_sel.push_back(poblacion[pos_aux2]);
+          else
+              poblacion_sel.push_back(poblacion[pos_aux1]);
+        }
+      
+        //cruce
+        size_t n_cruces = ceil(0.7 * (poblacion_sel.size()*0.5));
+        size_t cruces = 0;
+        size_t index = 0;
+
+        while (cruces < n_cruces) {
+          for (; index<poblacion_sel.size() && cruces < n_cruces; index+=2) {
+            cruce_uniforme(poblacion_sel[index], poblacion_sel[index+1], poblacion_nueva);
+            cruces ++;
+          }
+        }
+
+        for (; index<poblacion_sel.size(); index++)
+          poblacion_nueva.push_back(poblacion_sel[index]);
+
+        //mutación
+        size_t n_mutaciones = ceil(0.1 * poblacion_nueva.size());
+        size_t mutaciones = 0;
+
+        while (mutaciones < n_mutaciones) {
+          for (size_t i=0; i<poblacion_nueva.size() && mutaciones < n_mutaciones; i++) {
+              mutar(poblacion_nueva[i]);
+              mutaciones ++;
+          }
+        }
+
+        for (size_t i=0; i<poblacion_nueva.size(); i++){
+          if (problem->fitness(poblacion_nueva[i]) < problem->fitness(mejor_sol)) mejor_sol = poblacion_nueva[i];
+          if (problem->fitness(poblacion_nueva[i]) > problem->fitness(peor_sol)) {
+            peor_sol = poblacion_nueva[i];
+            peor_sol_index = i;
+          }
+        }
+
+        //elitismo
+        if (problem->fitness(peor_sol) > problem->fitness(mejor_sol_ant))
+          poblacion_nueva[peor_sol_index] = mejor_sol_ant;
+
+        mejor_sol_ant = mejor_sol;
+        poblacion = poblacion_nueva;
+    }
+
+    fitness = problem->fitness(mejor_sol);
+    return ResultMH(mejor_sol, fitness, evals);
+  }
+
