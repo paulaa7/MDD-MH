@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/AGG_posicion.cpp.o: \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/src/AGG_posicion.cpp \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/src/AGG_posicion.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/cassert \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -12,10 +12,10 @@ CMakeFiles/main.dir/src/AGG_posicion.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h /usr/include/assert.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/AGG_posicion.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/mh.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/problem.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/solution.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGG_posicion.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/problem.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/solution.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/c++/13/bits/stl_algobase.h \
  /usr/include/c++/13/bits/functexcept.h \
@@ -55,7 +55,7 @@ CMakeFiles/main.dir/src/AGG_posicion.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/random.hpp \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/random.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -202,8 +202,8 @@ CMakeFiles/main.dir/src/AGG_posicion.cpp.o: \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/MDD.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/../common/problem.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/MDD.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/../common/problem.h \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
  /usr/include/c++/13/bits/hashtable.h \

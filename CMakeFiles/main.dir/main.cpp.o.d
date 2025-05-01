@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/main.cpp.o: \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/main.cpp \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -150,13 +150,13 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/problem.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/solution.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/problem.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/solution.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/random.hpp \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/random.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -201,12 +201,12 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/util.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/MDD.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/../common/problem.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/brutesearch.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/mh.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/greedy.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/randomsearch.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/AGG_posicion.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/AGG_uniforme.h
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/util.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/MDD.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/../common/problem.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/brutesearch.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/greedy.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/randomsearch.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGG_posicion.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGG_uniforme.h

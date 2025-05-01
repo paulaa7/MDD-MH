@@ -3,6 +3,8 @@ main: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
   CMakeFiles/main.dir/main.cpp.o \
+  CMakeFiles/main.dir/src/AGE_posicion.cpp.o \
+  CMakeFiles/main.dir/src/AGE_uniforme.cpp.o \
   CMakeFiles/main.dir/src/AGG_posicion.cpp.o \
   CMakeFiles/main.dir/src/AGG_uniforme.cpp.o \
   CMakeFiles/main.dir/src/MDD.cpp.o \
@@ -46,6 +48,10 @@ main: \
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 CMakeFiles/main.dir/main.cpp.o:
+
+CMakeFiles/main.dir/src/AGE_posicion.cpp.o:
+
+CMakeFiles/main.dir/src/AGE_uniforme.cpp.o:
 
 CMakeFiles/main.dir/src/AGG_posicion.cpp.o:
 

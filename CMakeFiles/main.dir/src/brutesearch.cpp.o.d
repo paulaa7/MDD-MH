@@ -1,10 +1,10 @@
 CMakeFiles/main.dir/src/brutesearch.cpp.o: \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/src/brutesearch.cpp \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/src/brutesearch.cpp \
  /usr/include/stdc-predef.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/inc/brutesearch.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/mh.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/problem.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/solution.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/brutesearch.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/problem.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/solution.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -55,7 +55,7 @@ CMakeFiles/main.dir/src/brutesearch.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/random.hpp \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/random.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -203,4 +203,4 @@ CMakeFiles/main.dir/src/brutesearch.cpp.o: \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/iostream \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/mh_2_28-04/common/util.h
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/util.h

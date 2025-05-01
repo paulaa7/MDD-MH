@@ -57,10 +57,10 @@ RM = /snap/cmake/1461/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04"
+CMAKE_SOURCE_DIR = "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04"
+CMAKE_BINARY_DIR = "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,16 +87,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles" "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles" "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/mh_2_28-04/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" 0
 .PHONY : codegen
 
 # The main clean target
@@ -159,6 +159,54 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/AGE_posicion.o: src/AGE_posicion.cpp.o
+.PHONY : src/AGE_posicion.o
+
+# target to build an object file
+src/AGE_posicion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGE_posicion.cpp.o
+.PHONY : src/AGE_posicion.cpp.o
+
+src/AGE_posicion.i: src/AGE_posicion.cpp.i
+.PHONY : src/AGE_posicion.i
+
+# target to preprocess a source file
+src/AGE_posicion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGE_posicion.cpp.i
+.PHONY : src/AGE_posicion.cpp.i
+
+src/AGE_posicion.s: src/AGE_posicion.cpp.s
+.PHONY : src/AGE_posicion.s
+
+# target to generate assembly for a file
+src/AGE_posicion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGE_posicion.cpp.s
+.PHONY : src/AGE_posicion.cpp.s
+
+src/AGE_uniforme.o: src/AGE_uniforme.cpp.o
+.PHONY : src/AGE_uniforme.o
+
+# target to build an object file
+src/AGE_uniforme.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGE_uniforme.cpp.o
+.PHONY : src/AGE_uniforme.cpp.o
+
+src/AGE_uniforme.i: src/AGE_uniforme.cpp.i
+.PHONY : src/AGE_uniforme.i
+
+# target to preprocess a source file
+src/AGE_uniforme.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGE_uniforme.cpp.i
+.PHONY : src/AGE_uniforme.cpp.i
+
+src/AGE_uniforme.s: src/AGE_uniforme.cpp.s
+.PHONY : src/AGE_uniforme.s
+
+# target to generate assembly for a file
+src/AGE_uniforme.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGE_uniforme.cpp.s
+.PHONY : src/AGE_uniforme.cpp.s
 
 src/AGG_posicion.o: src/AGG_posicion.cpp.o
 .PHONY : src/AGG_posicion.o
@@ -365,6 +413,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/AGE_posicion.o"
+	@echo "... src/AGE_posicion.i"
+	@echo "... src/AGE_posicion.s"
+	@echo "... src/AGE_uniforme.o"
+	@echo "... src/AGE_uniforme.i"
+	@echo "... src/AGE_uniforme.s"
 	@echo "... src/AGG_posicion.o"
 	@echo "... src/AGG_posicion.i"
 	@echo "... src/AGG_posicion.s"
