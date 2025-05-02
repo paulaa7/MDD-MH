@@ -20,6 +20,7 @@ ResultMH AM_2::optimize(Problem *problem, int maxevals){
     //n y m
     m = problem->getSolutionSize();
     n = problem->getSolutionDomainRange().second + 1;
+    inicializar(n, m);
   
     //solution
     vector<tSolution> poblacion;
