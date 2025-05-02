@@ -5,15 +5,6 @@
 #include <iostream>
 using namespace std;
 
-template <class T> void print_vector(string name, const vector<T> &sol) {
-  cout << name << ": ";
-
-  for (auto elem : sol) {
-    cout << elem << ", ";
-  }
-  cout << endl;
-}
-
 tFitness MDD::fitness(const tSolution &solution) {
   vector<double> distancias(solution.size(), 0.0);
 

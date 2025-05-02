@@ -48,9 +48,13 @@ using namespace std;
 
     for (size_t i = 0; i < n; i ++) if (p2[i] != p1[i]) nodes_shuffle.push_back(p2[i]);
 
+    cout << endl << "1 " << endl;
+
     shuffle1 = shuffle2 = nodes_shuffle;
     Random::shuffle(shuffle1);
     Random::shuffle(shuffle2);
+
+    cout << endl << "2" << endl;
 
     //asignación de valores a los hijos
     for (size_t i = 0; i < n; i ++) {
@@ -65,6 +69,7 @@ using namespace std;
         shuffle2.pop_back();
       }
     }       
+    cout << endl << "3 " << endl;
 
     for (size_t i = 0; i < n; i ++) {
       if (h1[i])  hijo1.push_back(i);
@@ -129,12 +134,12 @@ using namespace std;
         poblacion_sel.clear();
         poblacion_nueva.clear();
         poblacion_sel.reserve(2);
-        //poblacion_nueva.reserve(50);
+        poblacion_nueva.reserve(2);
 
         //selección
         tSolution sol1, sol2;
         size_t pos_aux1, pos_aux2;
-        for (size_t i=0; i<poblacion_sel.size(); i++) {
+        for (size_t i=0; i<2; i++) {
           pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
           pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
 
@@ -149,9 +154,13 @@ using namespace std;
               poblacion_sel.push_back(poblacion[pos_aux1]);
         }
       
+        cout << endl << "antes " << endl;
+        print_vector("p0", poblacion_sel[0]);
+        print_vector("p1", poblacion_sel[1]);
+        cout << endl << "antes de cruce " << endl;
         //cruce
         cruce_intercambio(poblacion_sel[0], poblacion_sel[1], poblacion_nueva);
-
+        cout << endl << "cruce " << endl;
         //mutación  (poblacion_sel, no?)
         size_t n_mutaciones = ceil(0.1 * poblacion_sel.size());
         size_t mutaciones = 0;
@@ -162,19 +171,22 @@ using namespace std;
               mutaciones ++;
           }
         }
-
+        cout << endl << "m " << endl;
         //averiguar qué hijo tiene mejor fitness
         mejor_hijo_reemplazo = poblacion_nueva[1];
         if (problem->fitness(poblacion_nueva[0]) < problem->fitness(poblacion_nueva[1]))
             mejor_hijo_reemplazo = poblacion_nueva[0];
+        cout << endl << "1 " << endl;
 
         //comprobar si el mejor hijo es la mejor solución
         if (problem->fitness(mejor_hijo_reemplazo) < problem->fitness(mejor_sol))
             mejor_sol = mejor_hijo_reemplazo;
-
+        cout << endl << "2 " << endl;
         //reemplazo
         if (problem->fitness(peor_sol) > problem->fitness(mejor_hijo_reemplazo));
             poblacion[peor_sol_index] = mejor_hijo_reemplazo;
+
+        cout << endl << "3 " << endl;
 
         //recalcular peor solución
         peor_sol = poblacion_nueva[0];
