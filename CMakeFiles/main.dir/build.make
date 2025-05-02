@@ -142,10 +142,66 @@ CMakeFiles/main.dir/src/AGG_uniforme.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AGG_uniforme.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AGG_uniforme.cpp" -o CMakeFiles/main.dir/src/AGG_uniforme.cpp.s
 
+CMakeFiles/main.dir/src/AM_1.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/AM_1.cpp.o: src/AM_1.cpp
+CMakeFiles/main.dir/src/AM_1.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/AM_1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/AM_1.cpp.o -MF CMakeFiles/main.dir/src/AM_1.cpp.o.d -o CMakeFiles/main.dir/src/AM_1.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_1.cpp"
+
+CMakeFiles/main.dir/src/AM_1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/AM_1.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_1.cpp" > CMakeFiles/main.dir/src/AM_1.cpp.i
+
+CMakeFiles/main.dir/src/AM_1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AM_1.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_1.cpp" -o CMakeFiles/main.dir/src/AM_1.cpp.s
+
+CMakeFiles/main.dir/src/AM_2.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/AM_2.cpp.o: src/AM_2.cpp
+CMakeFiles/main.dir/src/AM_2.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/AM_2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/AM_2.cpp.o -MF CMakeFiles/main.dir/src/AM_2.cpp.o.d -o CMakeFiles/main.dir/src/AM_2.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_2.cpp"
+
+CMakeFiles/main.dir/src/AM_2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/AM_2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_2.cpp" > CMakeFiles/main.dir/src/AM_2.cpp.i
+
+CMakeFiles/main.dir/src/AM_2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AM_2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_2.cpp" -o CMakeFiles/main.dir/src/AM_2.cpp.s
+
+CMakeFiles/main.dir/src/AM_3.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/AM_3.cpp.o: src/AM_3.cpp
+CMakeFiles/main.dir/src/AM_3.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/AM_3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/AM_3.cpp.o -MF CMakeFiles/main.dir/src/AM_3.cpp.o.d -o CMakeFiles/main.dir/src/AM_3.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_3.cpp"
+
+CMakeFiles/main.dir/src/AM_3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/AM_3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_3.cpp" > CMakeFiles/main.dir/src/AM_3.cpp.i
+
+CMakeFiles/main.dir/src/AM_3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AM_3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_3.cpp" -o CMakeFiles/main.dir/src/AM_3.cpp.s
+
+CMakeFiles/main.dir/src/AM_comun.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/AM_comun.cpp.o: src/AM_comun.cpp
+CMakeFiles/main.dir/src/AM_comun.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/AM_comun.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/AM_comun.cpp.o -MF CMakeFiles/main.dir/src/AM_comun.cpp.o.d -o CMakeFiles/main.dir/src/AM_comun.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_comun.cpp"
+
+CMakeFiles/main.dir/src/AM_comun.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/AM_comun.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_comun.cpp" > CMakeFiles/main.dir/src/AM_comun.cpp.i
+
+CMakeFiles/main.dir/src/AM_comun.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AM_comun.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_comun.cpp" -o CMakeFiles/main.dir/src/AM_comun.cpp.s
+
 CMakeFiles/main.dir/src/MDD.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/MDD.cpp.o: src/MDD.cpp
 CMakeFiles/main.dir/src/MDD.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/MDD.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/src/MDD.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/MDD.cpp.o -MF CMakeFiles/main.dir/src/MDD.cpp.o.d -o CMakeFiles/main.dir/src/MDD.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/MDD.cpp"
 
 CMakeFiles/main.dir/src/MDD.cpp.i: cmake_force
@@ -159,7 +215,7 @@ CMakeFiles/main.dir/src/MDD.cpp.s: cmake_force
 CMakeFiles/main.dir/src/brutesearch.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/brutesearch.cpp.o: src/brutesearch.cpp
 CMakeFiles/main.dir/src/brutesearch.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/brutesearch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/src/brutesearch.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/brutesearch.cpp.o -MF CMakeFiles/main.dir/src/brutesearch.cpp.o.d -o CMakeFiles/main.dir/src/brutesearch.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/brutesearch.cpp"
 
 CMakeFiles/main.dir/src/brutesearch.cpp.i: cmake_force
@@ -173,7 +229,7 @@ CMakeFiles/main.dir/src/brutesearch.cpp.s: cmake_force
 CMakeFiles/main.dir/src/greedy.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/greedy.cpp.o: src/greedy.cpp
 CMakeFiles/main.dir/src/greedy.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/greedy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/src/greedy.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/greedy.cpp.o -MF CMakeFiles/main.dir/src/greedy.cpp.o.d -o CMakeFiles/main.dir/src/greedy.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/greedy.cpp"
 
 CMakeFiles/main.dir/src/greedy.cpp.i: cmake_force
@@ -187,7 +243,7 @@ CMakeFiles/main.dir/src/greedy.cpp.s: cmake_force
 CMakeFiles/main.dir/src/localsearch_rand.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/localsearch_rand.cpp.o: src/localsearch_rand.cpp
 CMakeFiles/main.dir/src/localsearch_rand.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/localsearch_rand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/src/localsearch_rand.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/localsearch_rand.cpp.o -MF CMakeFiles/main.dir/src/localsearch_rand.cpp.o.d -o CMakeFiles/main.dir/src/localsearch_rand.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/localsearch_rand.cpp"
 
 CMakeFiles/main.dir/src/localsearch_rand.cpp.i: cmake_force
@@ -201,7 +257,7 @@ CMakeFiles/main.dir/src/localsearch_rand.cpp.s: cmake_force
 CMakeFiles/main.dir/src/pincrem.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/pincrem.cpp.o: src/pincrem.cpp
 CMakeFiles/main.dir/src/pincrem.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/src/pincrem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/src/pincrem.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/pincrem.cpp.o -MF CMakeFiles/main.dir/src/pincrem.cpp.o.d -o CMakeFiles/main.dir/src/pincrem.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/pincrem.cpp"
 
 CMakeFiles/main.dir/src/pincrem.cpp.i: cmake_force
@@ -215,7 +271,7 @@ CMakeFiles/main.dir/src/pincrem.cpp.s: cmake_force
 CMakeFiles/main.dir/src/randomsearch.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/randomsearch.cpp.o: src/randomsearch.cpp
 CMakeFiles/main.dir/src/randomsearch.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/src/randomsearch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/src/randomsearch.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/randomsearch.cpp.o -MF CMakeFiles/main.dir/src/randomsearch.cpp.o.d -o CMakeFiles/main.dir/src/randomsearch.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/randomsearch.cpp"
 
 CMakeFiles/main.dir/src/randomsearch.cpp.i: cmake_force
@@ -233,6 +289,10 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/AGE_uniforme.cpp.o" \
 "CMakeFiles/main.dir/src/AGG_posicion.cpp.o" \
 "CMakeFiles/main.dir/src/AGG_uniforme.cpp.o" \
+"CMakeFiles/main.dir/src/AM_1.cpp.o" \
+"CMakeFiles/main.dir/src/AM_2.cpp.o" \
+"CMakeFiles/main.dir/src/AM_3.cpp.o" \
+"CMakeFiles/main.dir/src/AM_comun.cpp.o" \
 "CMakeFiles/main.dir/src/MDD.cpp.o" \
 "CMakeFiles/main.dir/src/brutesearch.cpp.o" \
 "CMakeFiles/main.dir/src/greedy.cpp.o" \
@@ -248,6 +308,10 @@ main: CMakeFiles/main.dir/src/AGE_posicion.cpp.o
 main: CMakeFiles/main.dir/src/AGE_uniforme.cpp.o
 main: CMakeFiles/main.dir/src/AGG_posicion.cpp.o
 main: CMakeFiles/main.dir/src/AGG_uniforme.cpp.o
+main: CMakeFiles/main.dir/src/AM_1.cpp.o
+main: CMakeFiles/main.dir/src/AM_2.cpp.o
+main: CMakeFiles/main.dir/src/AM_3.cpp.o
+main: CMakeFiles/main.dir/src/AM_comun.cpp.o
 main: CMakeFiles/main.dir/src/MDD.cpp.o
 main: CMakeFiles/main.dir/src/brutesearch.cpp.o
 main: CMakeFiles/main.dir/src/greedy.cpp.o
@@ -257,7 +321,7 @@ main: CMakeFiles/main.dir/src/randomsearch.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/compiler_depend.ts
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

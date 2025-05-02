@@ -5,6 +5,8 @@
 #include <set>
 #include <iostream>
 
+#include <util.h>
+
 using namespace std;
 
 /**
@@ -51,12 +53,11 @@ void AM_comun::cruce_uniforme(const tSolution& padre1, const tSolution& padre2,
     bool hijo_a_elegir;
     int tam = padre1.size();
 
-    //inicialización de padres
+    //inicialización de padres    
     for (size_t i = 0; i < tam; i ++) {
       p1[padre1[i]] = true;
       p2[padre2[i]] = true;
     }
-
     //asignación de valores a los hijos
     for (size_t i = 0; i < n; i ++) {
       //los valores comunes se mantienen en ambos
@@ -103,67 +104,70 @@ void AM_comun::mutar(tSolution &cromosoma) {
     cromosoma[a_cambiar] = *it;
   }
   
-tSolution AM_comun::BL_rand(tSolution &sol, int maxevals, Problem * problem){
+tSolution AM_comun::BL_rand(tSolution &solution, int maxevals, Problem *problem, size_t &evals){
   assert(maxevals > 0);
 
-  //n y m
-  size_t m = problem->getSolutionSize();
-  size_t n = problem->getSolutionDomainRange().second + 1;
+  if (evals < maxevals) {
+    //n y m
+    m = problem->getSolutionSize();
+    n = problem->getSolutionDomainRange().second + 1;
 
-  //solution
-  tSolution solution = sol;
-  SolutionFactoringInfo *info = problem->generateFactoringInfo(solution);
-  tFitness fitness = problem->fitness(solution);
+    //solution
+    SolutionFactoringInfo *info = problem->generateFactoringInfo(solution);
+    tFitness fitness = problem->fitness(solution);
 
-  //opciones
-  unordered_set<tDomain> usados(solution.begin(), solution.end());
-  vector<tDomain> options;
+    //opciones
+    unordered_set<tDomain> usados(solution.begin(), solution.end());
+    vector<tDomain> options;
 
-  for (tDomain i = 0; i < n; i++) {
-    if (usados.find(i) == usados.end()) {
-        options.push_back(i);
+    for (tDomain i = 0; i < n; i++) {
+      if (usados.find(i) == usados.end()) {
+          options.push_back(i);
+      }
+    }
+
+    vector<pair<size_t, size_t>> combinaciones_posibles;
+    combinaciones_posibles.clear();
+      for (size_t i=0; i<m; i++){
+        for (const tDomain& opt : options) {
+            combinaciones_posibles.emplace_back(i, opt);
+    }}
+    Random::shuffle(combinaciones_posibles);
+    size_t index_comb = 0;
+
+    for (int z=0; z<maxevals && (evals < maxevals); z++){
+
+        if (combinaciones_posibles.empty()) break;;
+        if (index_comb >= combinaciones_posibles.size()) break;
+        
+        auto& [pos, new_value] = combinaciones_posibles[index_comb];
+
+        tFitness fit2 = problem->fitness(solution, info, pos, new_value);
+
+        if (fit2 < fitness) {
+            auto it = std::find(options.begin(), options.end(), new_value);
+
+            if (it != options.end()) {
+                *it = solution[pos];
+            }
+
+            problem->updateSolutionFactoringInfo(info, solution, pos, new_value);
+            solution[pos] = new_value;
+            fitness = fit2;
+
+            //actualizar combinaciones_posibles
+            combinaciones_posibles.clear();
+              for (size_t i=0; i<m; i++){
+                for (const tDomain& opt : options) {
+                    combinaciones_posibles.emplace_back(i, opt);
+            }}
+            Random::shuffle(combinaciones_posibles);
+            index_comb = 0;
+            
+        } else index_comb ++;
+
+        evals ++;
     }
   }
-
-  vector<pair<size_t, size_t>> combinaciones_posibles;
-  combinaciones_posibles.clear();
-    for (size_t i=0; i<m; i++){
-      for (const tDomain& opt : options) {
-          combinaciones_posibles.emplace_back(i, opt);
-  }}
-  Random::shuffle(combinaciones_posibles);
-  size_t index_comb = 0;
-
-  for (int z=0; z<maxevals; z++){
-
-      if (combinaciones_posibles.empty()) continue;
-      if (index_comb >= combinaciones_posibles.size()) break;
-      
-      auto& [pos, new_value] = combinaciones_posibles[index_comb];
-
-      tFitness fit2 = problem->fitness(solution, info, pos, new_value);
-
-      if (fit2 < fitness) {
-          auto it = std::find(options.begin(), options.end(), new_value);
-
-          if (it != options.end()) {
-              *it = solution[pos];
-          }
-
-          problem->updateSolutionFactoringInfo(info, solution, pos, new_value);
-          solution[pos] = new_value;
-          fitness = fit2;
-
-          //actualizar combinaciones_posibles
-          combinaciones_posibles.clear();
-            for (size_t i=0; i<m; i++){
-              for (const tDomain& opt : options) {
-                  combinaciones_posibles.emplace_back(i, opt);
-          }}
-          index_comb = 0;
-          
-      } else index_comb ++;
-  }
-
   return solution;
 }

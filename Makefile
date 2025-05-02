@@ -256,6 +256,102 @@ src/AGG_uniforme.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AGG_uniforme.cpp.s
 .PHONY : src/AGG_uniforme.cpp.s
 
+src/AM_1.o: src/AM_1.cpp.o
+.PHONY : src/AM_1.o
+
+# target to build an object file
+src/AM_1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_1.cpp.o
+.PHONY : src/AM_1.cpp.o
+
+src/AM_1.i: src/AM_1.cpp.i
+.PHONY : src/AM_1.i
+
+# target to preprocess a source file
+src/AM_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_1.cpp.i
+.PHONY : src/AM_1.cpp.i
+
+src/AM_1.s: src/AM_1.cpp.s
+.PHONY : src/AM_1.s
+
+# target to generate assembly for a file
+src/AM_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_1.cpp.s
+.PHONY : src/AM_1.cpp.s
+
+src/AM_2.o: src/AM_2.cpp.o
+.PHONY : src/AM_2.o
+
+# target to build an object file
+src/AM_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_2.cpp.o
+.PHONY : src/AM_2.cpp.o
+
+src/AM_2.i: src/AM_2.cpp.i
+.PHONY : src/AM_2.i
+
+# target to preprocess a source file
+src/AM_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_2.cpp.i
+.PHONY : src/AM_2.cpp.i
+
+src/AM_2.s: src/AM_2.cpp.s
+.PHONY : src/AM_2.s
+
+# target to generate assembly for a file
+src/AM_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_2.cpp.s
+.PHONY : src/AM_2.cpp.s
+
+src/AM_3.o: src/AM_3.cpp.o
+.PHONY : src/AM_3.o
+
+# target to build an object file
+src/AM_3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_3.cpp.o
+.PHONY : src/AM_3.cpp.o
+
+src/AM_3.i: src/AM_3.cpp.i
+.PHONY : src/AM_3.i
+
+# target to preprocess a source file
+src/AM_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_3.cpp.i
+.PHONY : src/AM_3.cpp.i
+
+src/AM_3.s: src/AM_3.cpp.s
+.PHONY : src/AM_3.s
+
+# target to generate assembly for a file
+src/AM_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_3.cpp.s
+.PHONY : src/AM_3.cpp.s
+
+src/AM_comun.o: src/AM_comun.cpp.o
+.PHONY : src/AM_comun.o
+
+# target to build an object file
+src/AM_comun.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_comun.cpp.o
+.PHONY : src/AM_comun.cpp.o
+
+src/AM_comun.i: src/AM_comun.cpp.i
+.PHONY : src/AM_comun.i
+
+# target to preprocess a source file
+src/AM_comun.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_comun.cpp.i
+.PHONY : src/AM_comun.cpp.i
+
+src/AM_comun.s: src/AM_comun.cpp.s
+.PHONY : src/AM_comun.s
+
+# target to generate assembly for a file
+src/AM_comun.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_comun.cpp.s
+.PHONY : src/AM_comun.cpp.s
+
 src/MDD.o: src/MDD.cpp.o
 .PHONY : src/MDD.o
 
@@ -425,6 +521,18 @@ help:
 	@echo "... src/AGG_uniforme.o"
 	@echo "... src/AGG_uniforme.i"
 	@echo "... src/AGG_uniforme.s"
+	@echo "... src/AM_1.o"
+	@echo "... src/AM_1.i"
+	@echo "... src/AM_1.s"
+	@echo "... src/AM_2.o"
+	@echo "... src/AM_2.i"
+	@echo "... src/AM_2.s"
+	@echo "... src/AM_3.o"
+	@echo "... src/AM_3.i"
+	@echo "... src/AM_3.s"
+	@echo "... src/AM_comun.o"
+	@echo "... src/AM_comun.i"
+	@echo "... src/AM_comun.s"
 	@echo "... src/MDD.o"
 	@echo "... src/MDD.i"
 	@echo "... src/MDD.s"

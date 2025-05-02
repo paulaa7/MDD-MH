@@ -14,24 +14,6 @@ using namespace std;
  * @return A pair containing the best solution found and its fitness
  */
 
-template <class T> void print_vector(string name, const vector<T> &sol) {
-  cout << name << ": ";
-
-  for (auto elem : sol) {
-    cout << elem << ", ";
-  }
-  cout << endl;
-}
-
-template <class T> void print_vector2(string name, const vector<T> &sol) {
-  cout << name << ": ";
-
-  for (auto elem : sol) {
-    cout << "(" << elem.first << ", " << elem.second << "), ";
-  }
-  cout << endl;
-}
-
 ResultMH LocalSearchRandom::optimize(Problem *problem, int maxevals){
   assert(maxevals > 0);
 
@@ -65,7 +47,7 @@ ResultMH LocalSearchRandom::optimize(Problem *problem, int maxevals){
 
   for (int z=0; z<maxevals; z++){
 
-      if (combinaciones_posibles.empty()) continue;
+      if (combinaciones_posibles.empty()) break;
       if (index_comb >= combinaciones_posibles.size()) break;
       
       auto& [pos, new_value] = combinaciones_posibles[index_comb];
@@ -89,6 +71,7 @@ ResultMH LocalSearchRandom::optimize(Problem *problem, int maxevals){
               for (const tDomain& opt : options) {
                   combinaciones_posibles.emplace_back(i, opt);
           }}
+          Random::shuffle(combinaciones_posibles);
           index_comb = 0;
           
       } else index_comb ++;

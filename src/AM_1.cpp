@@ -4,6 +4,8 @@
 #include <set>
 #include <iostream>
 
+#include <util.h>
+
 using namespace std;
 
 /**
@@ -15,10 +17,12 @@ using namespace std;
 ResultMH AM_1::optimize(Problem *problem, int maxevals){
     assert(maxevals > 0);
     size_t evals = 0;
+    size_t evaluaciones = 0;
   
     //n y m
     m = problem->getSolutionSize();
     n = problem->getSolutionDomainRange().second + 1;
+    inicializar(n, m);
   
     //solution
     vector<tSolution> poblacion;
@@ -71,19 +75,20 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
           else
               poblacion_sel.push_back(poblacion[pos_aux1]);
         }
-      
+
         //cruce
         size_t n_cruces = ceil(0.7 * (poblacion_sel.size()*0.5));
         size_t cruces = 0;
         size_t index = 0;
-
+        cout << "aa" << endl;
         while (cruces < n_cruces) {
           for (; index<poblacion_sel.size() && cruces < n_cruces; index+=2) {
-            cruce_uniforme(poblacion_sel[index], poblacion_sel[index+1], poblacion_nueva);
+            if (index + 1 < poblacion_sel.size())
+              cruce_uniforme(poblacion_sel[index], poblacion_sel[index+1], poblacion_nueva);
             cruces ++;
           }
         }
-
+        cout << "a" << endl;
         for (; index<poblacion_sel.size(); index++)
           poblacion_nueva.push_back(poblacion_sel[index]);
 
@@ -98,6 +103,15 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
           }
         }
 
+        //aplicacion de BL random
+        cout << "antes de bl" << endl;
+        if (evaluaciones % 10 == 0)
+          for (size_t i=0; i<poblacion_nueva.size(); i++)
+            poblacion_nueva[i] = BL_rand(poblacion_nueva[i], 400, problem, evals);
+
+        //recalcular peor y mejor solucion
+        peor_sol = poblacion_nueva[0];
+        peor_sol_index = 0;
         for (size_t i=0; i<poblacion_nueva.size(); i++){
           if (problem->fitness(poblacion_nueva[i]) < problem->fitness(mejor_sol)) mejor_sol = poblacion_nueva[i];
           if (problem->fitness(poblacion_nueva[i]) > problem->fitness(peor_sol)) {
@@ -112,6 +126,7 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
 
         mejor_sol_ant = mejor_sol;
         poblacion = poblacion_nueva;
+        evaluaciones ++;
     }
 
     fitness = problem->fitness(mejor_sol);
