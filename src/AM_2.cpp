@@ -100,17 +100,16 @@ ResultMH AM_2::optimize(Problem *problem, int maxevals){
           }
         }
 
-        //aplicacion de BL random
-        size_t n_busquedas = ceil(0.1 * poblacion_nueva.size());
-        size_t busquedas = 0;
-        index = 0;
-
         if (evaluaciones % 10 == 0) {
-            while (busquedas < n_busquedas) {
-                poblacion_nueva[index] = BL_rand(poblacion_nueva[index], 400, problem, evals);
-                index ++;
-                busquedas ++;
-            }
+          //aplicacion de BL random
+          size_t n_busquedas = ceil(0.1 * poblacion_nueva.size());
+          size_t busquedas = 0;
+          index = 0;
+          while (busquedas < n_busquedas) {
+              poblacion_nueva[index] = BL_rand(poblacion_nueva[index], 400, problem, evals);
+              index ++;
+              busquedas ++;
+          }
         }
 
         //recalcular peor y mejor solucion

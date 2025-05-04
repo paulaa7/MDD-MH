@@ -104,7 +104,6 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
         }
 
         //aplicacion de BL random
-        cout << "antes de bl" << endl;
         if (evaluaciones % 10 == 0)
           for (size_t i=0; i<poblacion_nueva.size(); i++)
             poblacion_nueva[i] = BL_rand(poblacion_nueva[i], 400, problem, evals);
