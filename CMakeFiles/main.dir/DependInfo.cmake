@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/MDD.cpp" "CMakeFiles/main.dir/src/MDD.cpp.o" "gcc" "CMakeFiles/main.dir/src/MDD.cpp.o.d"
   "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/brutesearch.cpp" "CMakeFiles/main.dir/src/brutesearch.cpp.o" "gcc" "CMakeFiles/main.dir/src/brutesearch.cpp.o.d"
   "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/greedy.cpp" "CMakeFiles/main.dir/src/greedy.cpp.o" "gcc" "CMakeFiles/main.dir/src/greedy.cpp.o.d"
+  "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/localsearch_heur.cpp" "CMakeFiles/main.dir/src/localsearch_heur.cpp.o" "gcc" "CMakeFiles/main.dir/src/localsearch_heur.cpp.o.d"
   "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/localsearch_rand.cpp" "CMakeFiles/main.dir/src/localsearch_rand.cpp.o" "gcc" "CMakeFiles/main.dir/src/localsearch_rand.cpp.o.d"
   "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/pincrem.cpp" "CMakeFiles/main.dir/src/pincrem.cpp.o" "gcc" "CMakeFiles/main.dir/src/pincrem.cpp.o.d"
   "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/randomsearch.cpp" "CMakeFiles/main.dir/src/randomsearch.cpp.o" "gcc" "CMakeFiles/main.dir/src/randomsearch.cpp.o.d"

@@ -24,6 +24,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/brutesearch.cpp.o.d"
   "CMakeFiles/main.dir/src/greedy.cpp.o"
   "CMakeFiles/main.dir/src/greedy.cpp.o.d"
+  "CMakeFiles/main.dir/src/localsearch_heur.cpp.o"
+  "CMakeFiles/main.dir/src/localsearch_heur.cpp.o.d"
   "CMakeFiles/main.dir/src/localsearch_rand.cpp.o"
   "CMakeFiles/main.dir/src/localsearch_rand.cpp.o.d"
   "CMakeFiles/main.dir/src/pincrem.cpp.o"

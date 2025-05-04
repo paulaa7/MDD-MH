@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/common" -I"/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/inc"
 
-CXX_FLAGS = 
+CXX_FLAGS = -O3 -DNDEBUG
 

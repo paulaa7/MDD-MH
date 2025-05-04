@@ -13,24 +13,6 @@ using namespace std;
  * @return A pair containing the best solution found and its fitness
  */
   
-  template <class T> void print_vector(string name, const vector<T> &sol) {
-    cout << name << ": ";
-  
-    for (auto elem : sol) {
-      cout << elem << ", ";
-    }
-    cout << endl;
-  }
-  
-  template <class T> void print_vector2(string name, const vector<T> &sol) {
-    cout << name << ": ";
-  
-    for (auto elem : sol) {
-      cout << "(" << elem.first << ", " << elem.second << "), ";
-    }
-    cout << endl;
-  }
-
   void AGE_posicion::cruce_intercambio(const tSolution& padre1, const tSolution& padre2, 
                                        vector<tSolution> &poblacion_nueva) {
     //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
@@ -132,7 +114,6 @@ using namespace std;
         poblacion_nueva.reserve(2);
 
         //selección
-        tSolution sol1, sol2;
         size_t pos_aux1, pos_aux2;
         for (size_t i=0; i<2; i++) {
           pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);

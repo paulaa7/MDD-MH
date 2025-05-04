@@ -13,23 +13,6 @@ using namespace std;
  * @return A pair containing the best solution found and its fitness
  */
   
-  template <class T> void print_vector(string name, const vector<T> &sol) {
-    cout << name << ": ";
-  
-    for (auto elem : sol) {
-      cout << elem << ", ";
-    }
-    cout << endl;
-  }
-  
-  template <class T> void print_vector2(string name, const vector<T> &sol) {
-    cout << name << ": ";
-  
-    for (auto elem : sol) {
-      cout << "(" << elem.first << ", " << elem.second << "), ";
-    }
-    cout << endl;
-  }
 
   void AGE_uniforme::reparar(const int num_nodos, vector<bool> &hijo) {
     if (num_nodos == 0) return;
@@ -135,7 +118,7 @@ using namespace std;
     vector<tSolution> poblacion_nueva;
 
     tSolution peor_sol, mejor_sol;
-    size_t peor_sol_index;
+    size_t peor_sol_index=0;
 
     tFitness fitness;
 
@@ -161,12 +144,12 @@ using namespace std;
         poblacion_sel.clear();
         poblacion_nueva.clear();
         poblacion_sel.reserve(2);
-        //poblacion_nueva.reserve(50);
+        poblacion_nueva.reserve(2);
 
         //selección
         tSolution sol1, sol2;
         size_t pos_aux1, pos_aux2;
-        for (size_t i=0; i<poblacion_sel.size(); i++) {
+        for (size_t i=0; i<2; i++) {
           pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
           pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
 

@@ -1,5 +1,5 @@
-CMakeFiles/main.dir/src/AM_2.cpp.o: \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/src/AM_2.cpp \
+CMakeFiles/main.dir/src/localsearch_heur.cpp.o: \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/src/localsearch_heur.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/cassert \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -12,8 +12,7 @@ CMakeFiles/main.dir/src/AM_2.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h /usr/include/assert.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_2.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_comun.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/localsearch_heur.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/problem.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/solution.h \
@@ -217,6 +216,4 @@ CMakeFiles/main.dir/src/AM_2.cpp.o: \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/set \
- /usr/include/c++/13/bits/stl_tree.h /usr/include/c++/13/bits/stl_set.h \
- /usr/include/c++/13/bits/stl_multiset.h /usr/include/c++/13/iostream
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/iostream

@@ -12,24 +12,6 @@ using namespace std;
  * @param maxevals Maximum number of evaluations allowed
  * @return A pair containing the best solution found and its fitness
  */
-  
-  template <class T> void print_vector(string name, const vector<T> &sol) {
-    cout << name << ": ";
-  
-    for (auto elem : sol) {
-      cout << elem << ", ";
-    }
-    cout << endl;
-  }
-  
-  template <class T> void print_vector2(string name, const vector<T> &sol) {
-    cout << name << ": ";
-  
-    for (auto elem : sol) {
-      cout << "(" << elem.first << ", " << elem.second << "), ";
-    }
-    cout << endl;
-  }
 
   void AGG_uniforme::reparar(const int num_nodos, vector<bool> &hijo) {
     if (num_nodos == 0) return;
@@ -135,7 +117,7 @@ using namespace std;
     vector<tSolution> poblacion_nueva;
 
     tSolution peor_sol;
-    size_t peor_sol_index;
+    size_t peor_sol_index=0;
     tSolution mejor_sol;
     tSolution mejor_sol_ant;
     tFitness fitness;

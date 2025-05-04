@@ -14,6 +14,7 @@ main: \
   CMakeFiles/main.dir/src/MDD.cpp.o \
   CMakeFiles/main.dir/src/brutesearch.cpp.o \
   CMakeFiles/main.dir/src/greedy.cpp.o \
+  CMakeFiles/main.dir/src/localsearch_heur.cpp.o \
   CMakeFiles/main.dir/src/localsearch_rand.cpp.o \
   CMakeFiles/main.dir/src/pincrem.cpp.o \
   CMakeFiles/main.dir/src/randomsearch.cpp.o \
@@ -43,6 +44,7 @@ main: \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o \
+  /lib/x86_64-linux-gnu/libm.so.6 \
   /lib64/ld-linux-x86-64.so.2
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o:
@@ -74,6 +76,8 @@ CMakeFiles/main.dir/src/MDD.cpp.o:
 CMakeFiles/main.dir/src/brutesearch.cpp.o:
 
 CMakeFiles/main.dir/src/greedy.cpp.o:
+
+CMakeFiles/main.dir/src/localsearch_heur.cpp.o:
 
 CMakeFiles/main.dir/src/localsearch_rand.cpp.o:
 
@@ -132,5 +136,7 @@ CMakeFiles/main.dir/src/randomsearch.cpp.o:
 /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o:
+
+/lib/x86_64-linux-gnu/libm.so.6:
 
 /lib64/ld-linux-x86-64.so.2:

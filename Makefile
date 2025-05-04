@@ -424,6 +424,30 @@ src/greedy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/greedy.cpp.s
 .PHONY : src/greedy.cpp.s
 
+src/localsearch_heur.o: src/localsearch_heur.cpp.o
+.PHONY : src/localsearch_heur.o
+
+# target to build an object file
+src/localsearch_heur.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/localsearch_heur.cpp.o
+.PHONY : src/localsearch_heur.cpp.o
+
+src/localsearch_heur.i: src/localsearch_heur.cpp.i
+.PHONY : src/localsearch_heur.i
+
+# target to preprocess a source file
+src/localsearch_heur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/localsearch_heur.cpp.i
+.PHONY : src/localsearch_heur.cpp.i
+
+src/localsearch_heur.s: src/localsearch_heur.cpp.s
+.PHONY : src/localsearch_heur.s
+
+# target to generate assembly for a file
+src/localsearch_heur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/localsearch_heur.cpp.s
+.PHONY : src/localsearch_heur.cpp.s
+
 src/localsearch_rand.o: src/localsearch_rand.cpp.o
 .PHONY : src/localsearch_rand.o
 
@@ -542,6 +566,9 @@ help:
 	@echo "... src/greedy.o"
 	@echo "... src/greedy.i"
 	@echo "... src/greedy.s"
+	@echo "... src/localsearch_heur.o"
+	@echo "... src/localsearch_heur.i"
+	@echo "... src/localsearch_heur.s"
 	@echo "... src/localsearch_rand.o"
 	@echo "... src/localsearch_rand.i"
 	@echo "... src/localsearch_rand.s"
