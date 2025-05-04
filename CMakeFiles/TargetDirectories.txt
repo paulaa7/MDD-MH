@@ -1,3 +1,3 @@
-/home/paula/Desktop/MDD-MH/CMakeFiles/main.dir
-/home/paula/Desktop/MDD-MH/CMakeFiles/edit_cache.dir
-/home/paula/Desktop/MDD-MH/CMakeFiles/rebuild_cache.dir
+/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles/main.dir
+/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles/edit_cache.dir
+/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles/rebuild_cache.dir

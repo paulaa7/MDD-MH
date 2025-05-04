@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/paula/Desktop/MDD-MH/common -I/home/paula/Desktop/MDD-MH/inc
+CXX_INCLUDES = -I"/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/common" -I"/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/inc"
 
 CXX_FLAGS = 
 

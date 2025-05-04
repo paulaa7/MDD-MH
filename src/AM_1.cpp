@@ -80,7 +80,6 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
         size_t n_cruces = ceil(0.7 * (poblacion_sel.size()*0.5));
         size_t cruces = 0;
         size_t index = 0;
-        cout << "aa" << endl;
         while (cruces < n_cruces) {
           for (; index<poblacion_sel.size() && cruces < n_cruces; index+=2) {
             if (index + 1 < poblacion_sel.size())
@@ -88,7 +87,6 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
             cruces ++;
           }
         }
-        cout << "a" << endl;
         for (; index<poblacion_sel.size(); index++)
           poblacion_nueva.push_back(poblacion_sel[index]);
 

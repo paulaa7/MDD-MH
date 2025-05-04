@@ -20,6 +20,7 @@
 #include "AM_comun.h"
 #include "AM_1.h"
 #include "AM_2.h"
+#include "AM_3.h"
 
 
 using namespace std;
@@ -45,6 +46,7 @@ int main(int argc, char *argv[]) {
   AGG_uniforme ragg_uni = AGG_uniforme();
   AM_1 ram1 = AM_1();
   AM_2 ram2 = AM_2();
+  AM_3 ram3 = AM_3();
 
   // Create the specific problem
   MDD rproblem = MDD(ruta);
@@ -54,7 +56,8 @@ int main(int argc, char *argv[]) {
                                            make_pair("AGG_posicion", &ragg_pos),
                                            make_pair("AGG_uniforme", &ragg_uni),
                                            make_pair("ram1", &ram1),
-                                           make_pair("ram2", &ram2)};
+                                           make_pair("ram2", &ram2),
+                                           make_pair("ram3", &ram3)};
   Problem *problem = dynamic_cast<Problem *>(&rproblem);
 
   cout << "---------------------------------------" << endl;
