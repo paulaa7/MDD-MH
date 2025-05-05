@@ -1,5 +1,5 @@
 #pragma once
-#include <mh.h>
+#include <OperadoresComunes.h>
 
 using namespace std;
 
@@ -8,13 +8,13 @@ using namespace std;
  * @see MH
  * @see Problem
  */
-class AGE_uniforme : public MH {
+class AGE_uniforme : public OperadoresComunes {
 
   private:
     size_t m, n;
     
   public:
-    AGE_uniforme() : MH() {}
+    AGE_uniforme() : OperadoresComunes() {}
     virtual ~AGE_uniforme() {}
 
     void cruce_uniforme(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);

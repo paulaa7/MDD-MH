@@ -1,5 +1,5 @@
 #pragma once
-#include <mh.h>
+#include <OperadoresComunes.h>
 #include <MDD.h>
 
 using namespace std;
@@ -9,13 +9,13 @@ using namespace std;
  * @see MH
  * @see Problem
  */
-class AGG_uniforme : public MH {
+class AGG_uniforme : public OperadoresComunes {
 
 private:
   size_t m, n;
   
 public:
-  AGG_uniforme() : MH() {}
+  AGG_uniforme() : OperadoresComunes() {}
   virtual ~AGG_uniforme() {}
 
   void cruce_uniforme(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);

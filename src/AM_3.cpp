@@ -13,134 +13,134 @@ using namespace std;
  */
   
 ResultMH AM_3::optimize(Problem *problem, int maxevals){
-    assert(maxevals > 0);
-    size_t evals = 0;
-    size_t evaluaciones = 0;
-  
-    //n y m
-    m = problem->getSolutionSize();
-    n = problem->getSolutionDomainRange().second + 1;
-    inicializar(n, m);
-  
-    //solution
-    vector<tSolution> poblacion;
-    vector<tSolution> poblacion_sel;
-    vector<tSolution> poblacion_nueva;
+  assert(maxevals > 0);
+  size_t evals = 0;
+  size_t evaluaciones = 0;
 
-    tSolution peor_sol;
-    size_t peor_sol_index;
-    tSolution mejor_sol;
-    tSolution mejor_sol_ant;
-    tFitness fitness;
+  //n y m
+  m = problem->getSolutionSize();
+  n = problem->getSolutionDomainRange().second + 1;
+  inicializar(n, m);
 
-    tSolution solution;
-    solution = problem->createSolution();
-    poblacion.push_back(solution);
+  //solution
+  vector<tSolution> poblacion;
+  vector<tSolution> poblacion_sel;
+  vector<tSolution> poblacion_nueva;
 
-    peor_sol = mejor_sol = mejor_sol_ant = solution;
+  tSolution peor_sol;
+  size_t peor_sol_index;
+  tSolution mejor_sol;
+  tSolution mejor_sol_ant;
+  tFitness fitness;
 
-    for (size_t i=1; i<50; i++){
-        solution = problem->createSolution();
-        poblacion.push_back(solution);
+  tSolution solution;
+  solution = problem->createSolution();
+  poblacion.push_back(solution);
 
-        if (problem->fitness(solution) < problem->fitness(mejor_sol)) mejor_sol = solution;
-        if (problem->fitness(solution) > problem->fitness(peor_sol)) {
-          peor_sol = solution; 
+  peor_sol = mejor_sol = mejor_sol_ant = solution;
+
+  for (size_t i=1; i<50; i++){
+      solution = problem->createSolution();
+      poblacion.push_back(solution);
+
+      if (problem->fitness(solution) < problem->fitness(mejor_sol)) mejor_sol = solution;
+      if (problem->fitness(solution) > problem->fitness(peor_sol)) {
+        peor_sol = solution; 
+        peor_sol_index = i;
+      }
+  }
+
+  for (; evals < maxevals; evals += 50) {
+      poblacion_sel.clear();
+      poblacion_nueva.clear();
+      poblacion_sel.reserve(50);
+      poblacion_nueva.reserve(50);
+
+      //selección
+      tSolution sol1, sol2;
+      size_t pos_aux1, pos_aux2;
+      for (size_t i=0; i<poblacion.size(); i++) {
+        pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
+        pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
+
+        if (problem->fitness(poblacion[pos_aux2]) < problem->fitness(poblacion[pos_aux1]))
+            pos_aux1 = pos_aux2;
+
+        pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
+
+        if (problem->fitness(poblacion[pos_aux2]) < problem->fitness(poblacion[pos_aux1]))
+            poblacion_sel.push_back(poblacion[pos_aux2]);
+        else
+            poblacion_sel.push_back(poblacion[pos_aux1]);
+      }
+    
+      //cruce
+      size_t n_cruces = ceil(0.7 * (poblacion_sel.size()*0.5));
+      size_t cruces = 0;
+      size_t index = 0;
+
+      while (cruces < n_cruces) {
+        for (; index<poblacion_sel.size() && cruces < n_cruces; index+=2) {
+          cruce_uniforme(poblacion_sel[index], poblacion_sel[index+1], poblacion_nueva);
+          cruces ++;
+        }
+      }
+
+      for (; index<poblacion_sel.size(); index++)
+        poblacion_nueva.push_back(poblacion_sel[index]);
+
+      //mutación
+      size_t n_mutaciones = ceil(0.1 * poblacion_nueva.size());
+      size_t mutaciones = 0;
+
+      while (mutaciones < n_mutaciones) {
+        for (size_t i=0; i<poblacion_nueva.size() && mutaciones < n_mutaciones; i++) {
+            mutar(poblacion_nueva[i]);
+            mutaciones ++;
+        }
+      }
+
+      if (evaluaciones % 10 == 0) {
+        //aplicacion de BL random (sobre los n_busquedas mejores)
+        size_t n_busquedas = ceil(0.1 * poblacion_nueva.size());
+
+        vector<size_t> indices(poblacion_nueva.size());
+        iota(indices.begin(), indices.end(), 0); //0..poblacion_nueva.size()-1
+
+        //ordenar indices segun fitness
+        nth_element(
+            indices.begin(),
+            indices.begin() + n_busquedas,
+            indices.end(),
+            [&problem, &poblacion_nueva](size_t i, size_t j) {
+                return problem->fitness(poblacion_nueva[i]) < problem->fitness(poblacion_nueva[j]);
+            }
+        );
+        for (size_t i=0; i < n_busquedas; i ++) {
+          poblacion_nueva[indices[i]] = BL_rand(poblacion_nueva[indices[i]], 400, problem, evals);
+        }
+      }
+
+      //recalcular peor y mejor solucion
+      peor_sol = poblacion_nueva[0];
+      peor_sol_index = 0;
+      for (size_t i=0; i<poblacion_nueva.size(); i++){
+        if (problem->fitness(poblacion_nueva[i]) < problem->fitness(mejor_sol)) mejor_sol = poblacion_nueva[i];
+        if (problem->fitness(poblacion_nueva[i]) > problem->fitness(peor_sol)) {
+          peor_sol = poblacion_nueva[i];
           peor_sol_index = i;
         }
-    }
+      }
 
-    for (; evals < maxevals; evals += 50) {
-        poblacion_sel.clear();
-        poblacion_nueva.clear();
-        poblacion_sel.reserve(50);
-        poblacion_nueva.reserve(50);
+      //elitismo
+      if (problem->fitness(peor_sol) > problem->fitness(mejor_sol_ant))
+        poblacion_nueva[peor_sol_index] = mejor_sol_ant;
 
-        //selección
-        tSolution sol1, sol2;
-        size_t pos_aux1, pos_aux2;
-        for (size_t i=0; i<poblacion.size(); i++) {
-          pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
-          pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
+      mejor_sol_ant = mejor_sol;
+      poblacion = poblacion_nueva;
+      evaluaciones ++;
+  }
 
-          if (problem->fitness(poblacion[pos_aux2]) < problem->fitness(poblacion[pos_aux1]))
-              pos_aux1 = pos_aux2;
-
-          pos_aux2 = Random::get<size_t>(0,poblacion.size()-1);
-
-          if (problem->fitness(poblacion[pos_aux2]) < problem->fitness(poblacion[pos_aux1]))
-              poblacion_sel.push_back(poblacion[pos_aux2]);
-          else
-              poblacion_sel.push_back(poblacion[pos_aux1]);
-        }
-      
-        //cruce
-        size_t n_cruces = ceil(0.7 * (poblacion_sel.size()*0.5));
-        size_t cruces = 0;
-        size_t index = 0;
-
-        while (cruces < n_cruces) {
-          for (; index<poblacion_sel.size() && cruces < n_cruces; index+=2) {
-            cruce_uniforme(poblacion_sel[index], poblacion_sel[index+1], poblacion_nueva);
-            cruces ++;
-          }
-        }
-
-        for (; index<poblacion_sel.size(); index++)
-          poblacion_nueva.push_back(poblacion_sel[index]);
-
-        //mutación
-        size_t n_mutaciones = ceil(0.1 * poblacion_nueva.size());
-        size_t mutaciones = 0;
-
-        while (mutaciones < n_mutaciones) {
-          for (size_t i=0; i<poblacion_nueva.size() && mutaciones < n_mutaciones; i++) {
-              mutar(poblacion_nueva[i]);
-              mutaciones ++;
-          }
-        }
-
-        if (evaluaciones % 10 == 0) {
-          //aplicacion de BL random (sobre los n_busquedas mejores)
-          size_t n_busquedas = ceil(0.1 * poblacion_nueva.size());
-
-          vector<size_t> indices(poblacion_nueva.size());
-          iota(indices.begin(), indices.end(), 0); //0..poblacion_nueva.size()-1
-
-          //ordenar indices segun fitness
-          nth_element(
-              indices.begin(),
-              indices.begin() + n_busquedas,
-              indices.end(),
-              [&problem, &poblacion_nueva](size_t i, size_t j) {
-                  return problem->fitness(poblacion_nueva[i]) < problem->fitness(poblacion_nueva[j]);
-              }
-          );
-          for (size_t i=0; i < n_busquedas; i ++) {
-            poblacion_nueva[indices[i]] = BL_rand(poblacion_nueva[indices[i]], 400, problem, evals);
-          }
-        }
-
-        //recalcular peor y mejor solucion
-        peor_sol = poblacion_nueva[0];
-        peor_sol_index = 0;
-        for (size_t i=0; i<poblacion_nueva.size(); i++){
-          if (problem->fitness(poblacion_nueva[i]) < problem->fitness(mejor_sol)) mejor_sol = poblacion_nueva[i];
-          if (problem->fitness(poblacion_nueva[i]) > problem->fitness(peor_sol)) {
-            peor_sol = poblacion_nueva[i];
-            peor_sol_index = i;
-          }
-        }
-
-        //elitismo
-        if (problem->fitness(peor_sol) > problem->fitness(mejor_sol_ant))
-          poblacion_nueva[peor_sol_index] = mejor_sol_ant;
-
-        mejor_sol_ant = mejor_sol;
-        poblacion = poblacion_nueva;
-        evaluaciones ++;
-    }
-
-    fitness = problem->fitness(mejor_sol);
-    return ResultMH(mejor_sol, fitness, evals);
+  fitness = problem->fitness(mejor_sol);
+  return ResultMH(mejor_sol, fitness, evals);
 }

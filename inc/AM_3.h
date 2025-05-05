@@ -1,5 +1,5 @@
 #pragma once
-#include <AM_comun.h>
+#include <OperadoresComunes.h>
 
 using namespace std;
 
@@ -8,13 +8,13 @@ using namespace std;
  * @see MH
  * @see Problem
  */
-class AM_3 : public AM_comun {
+class AM_3 : public OperadoresComunes {
 
 private:
   size_t m, n;
   
 public:
-  AM_3() : AM_comun() {}
+  AM_3() : OperadoresComunes() {}
   virtual ~AM_3() {}
 
   /**

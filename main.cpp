@@ -17,7 +17,7 @@
 #include "AGE_posicion.h"
 #include "AGE_uniforme.h"
 
-#include "AM_comun.h"
+#include "OperadoresComunes.h"
 #include "AM_1.h"
 #include "AM_2.h"
 #include "AM_3.h"
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
 
     Random::seed(seed);
     //cout << algoritmos[0].first << endl;
-    MH *mh = algoritmos[7].second;
+    MH *mh = algoritmos[9].second;
 
     auto inicio = std::chrono::high_resolution_clock::now();
     ResultMH result = mh->optimize(problem, 100000);

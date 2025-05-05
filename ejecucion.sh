@@ -1,7 +1,7 @@
 #!/bin/bash
 
 EXE="main"
-PARAM=12
+PARAM=15
 FITNESS_ONLY="solo_fitness.csv"
 TIEMPO_ONLY="solo_tiempo.csv"
 

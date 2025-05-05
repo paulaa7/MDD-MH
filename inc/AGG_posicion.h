@@ -1,5 +1,5 @@
 #pragma once
-#include <mh.h>
+#include <OperadoresComunes.h>
 #include <MDD.h>
 
 using namespace std;
@@ -9,13 +9,13 @@ using namespace std;
  * @see MH
  * @see Problem
  */
-class AGG_posicion : public MH {
+class AGG_posicion : public OperadoresComunes {
 
 private:
   size_t m, n;
   
 public:
-  AGG_posicion() : MH() {}
+  AGG_posicion() : OperadoresComunes() {}
   virtual ~AGG_posicion() {}
 
   void cruce_intercambio(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);

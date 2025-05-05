@@ -1,5 +1,5 @@
 #pragma once
-#include <mh.h>
+#include <OperadoresComunes.h>
 
 using namespace std;
 
@@ -8,13 +8,13 @@ using namespace std;
  * @see MH
  * @see Problem
  */
-class AGE_posicion : public MH {
+class AGE_posicion : public OperadoresComunes {
 
   private:
     size_t m, n;
     
   public:
-    AGE_posicion() : MH() {}
+    AGE_posicion() : OperadoresComunes() {}
     virtual ~AGE_posicion() {}
   
     void cruce_intercambio(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);

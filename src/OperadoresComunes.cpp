@@ -1,5 +1,5 @@
 #include <cassert>
-#include <AM_comun.h>
+#include <OperadoresComunes.h>
 #include <mh.h>
 #include <unordered_set>
 #include <set>
@@ -9,13 +9,8 @@
 
 using namespace std;
 
-/**
- * @param problem The problem to be optimized
- * @param maxevals Maximum number of evaluations allowed
- * @return A pair containing the best solution found and its fitness
- */
 
-void AM_comun::reparar(const int num_nodos, vector<bool> &hijo) {
+void OperadoresComunes::reparar(const int num_nodos, vector<bool> &hijo) {
     if (num_nodos == 0) return;
 
     else if (num_nodos > 0) {
@@ -41,7 +36,51 @@ void AM_comun::reparar(const int num_nodos, vector<bool> &hijo) {
     }
   }
 
-void AM_comun::cruce_uniforme(const tSolution& padre1, const tSolution& padre2, 
+void OperadoresComunes::cruce_intercambio(const tSolution& padre1, const tSolution& padre2, 
+                                       vector<tSolution> &poblacion_nueva) {
+    //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
+    vector<bool> p1 (n, false);
+    vector<bool> p2 (n, false);
+    vector<bool> h1 (n, false);
+    vector<bool> h2 (n, false);
+    tSolution hijo1, hijo2;
+
+    vector<bool> nodes_shuffle;
+    vector<bool> shuffle1, shuffle2;
+
+    //inicialización de padres
+    for (size_t i = 0; i < padre1.size(); i ++) p1[padre1[i]] = p2[padre2[i]] = true;
+
+    for (size_t i = 0; i < n; i ++) if (p2[i] != p1[i]) nodes_shuffle.push_back(p2[i]);
+
+    shuffle1 = shuffle2 = nodes_shuffle;
+    Random::shuffle(shuffle1);
+    Random::shuffle(shuffle2);
+
+    //asignación de valores a los hijos
+    for (size_t i = 0; i < n; i ++) {
+      //los valores comunes se mantienen en ambos
+      if (p2[i] == p1[i]) h1[i] = h2[i] = p2[i];
+
+      else { //el resto se reparte aleatoriamente
+        h1[i] = shuffle1.back();
+        shuffle1.pop_back();
+
+        h2[i] = shuffle2.back();
+        shuffle2.pop_back();
+      }
+    }       
+
+    for (size_t i = 0; i < n; i ++) {
+      if (h1[i])  hijo1.push_back(i);
+      if (h2[i])  hijo2.push_back(i);
+    }
+
+    poblacion_nueva.push_back(hijo1);
+    poblacion_nueva.push_back(hijo2);
+  }
+
+void OperadoresComunes::cruce_uniforme(const tSolution& padre1, const tSolution& padre2, 
                                     vector<tSolution> &poblacion_nueva) {
     //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
     vector<bool> p1 (n, false);
@@ -90,7 +129,7 @@ void AM_comun::cruce_uniforme(const tSolution& padre1, const tSolution& padre2,
     poblacion_nueva.push_back(hijo2);
   }
 
-void AM_comun::mutar(tSolution &cromosoma) {
+void OperadoresComunes::mutar(tSolution &cromosoma) {
     set<size_t> posibles;
     for (size_t i = 0; i < n; i ++) posibles.insert(i);
     for (size_t i = 0; i < cromosoma.size(); i ++) posibles.erase(cromosoma[i]);
@@ -104,7 +143,7 @@ void AM_comun::mutar(tSolution &cromosoma) {
     cromosoma[a_cambiar] = *it;
   }
   
-tSolution AM_comun::BL_rand(tSolution &solution, int maxevals, Problem *problem, size_t &evals){
+tSolution OperadoresComunes::BL_rand(tSolution &solution, int maxevals, Problem *problem, size_t &evals){
   assert(maxevals > 0);
 
   if (evals < maxevals) {
