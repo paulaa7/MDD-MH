@@ -11,137 +11,137 @@ using namespace std;
 
 
 void OperadoresComunes::reparar(const int num_nodos, vector<bool> &hijo) {
-    if (num_nodos == 0) return;
+  if (num_nodos == 0) return;
 
-    else if (num_nodos > 0) {
-      size_t pos = 0;
+  else if (num_nodos > 0) {
+    size_t pos = 0;
 
-      for (int i = num_nodos; i > 0; i --) {
-        while (!hijo[pos])
-          pos = Random::get<size_t>(0, hijo.size()-1);
+    for (int i = num_nodos; i > 0; i --) {
+      while (!hijo[pos])
+        pos = Random::get<size_t>(0, hijo.size()-1);
 
-        hijo[pos] = false;
-      }
-    }
-
-    else {
-      size_t pos = 0;
-
-      for (int i = num_nodos; i < 0; i ++) {
-        while (hijo[pos])
-          pos = Random::get<size_t>(0, hijo.size()-1);
-        
-        hijo[pos] = true;
-      }
+      hijo[pos] = false;
     }
   }
+
+  else {
+    size_t pos = 0;
+
+    for (int i = num_nodos; i < 0; i ++) {
+      while (hijo[pos])
+        pos = Random::get<size_t>(0, hijo.size()-1);
+      
+      hijo[pos] = true;
+    }
+  }
+}
 
 void OperadoresComunes::cruce_intercambio(const tSolution& padre1, const tSolution& padre2, 
                                        vector<tSolution> &poblacion_nueva) {
-    //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
-    vector<bool> p1 (n, false);
-    vector<bool> p2 (n, false);
-    vector<bool> h1 (n, false);
-    vector<bool> h2 (n, false);
-    tSolution hijo1, hijo2;
+  //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
+  vector<bool> p1 (n, false);
+  vector<bool> p2 (n, false);
+  vector<bool> h1 (n, false);
+  vector<bool> h2 (n, false);
+  tSolution hijo1, hijo2;
 
-    vector<bool> nodes_shuffle;
-    vector<bool> shuffle1, shuffle2;
+  vector<bool> nodes_shuffle;
+  vector<bool> shuffle1, shuffle2;
 
-    //inicialización de padres
-    for (size_t i = 0; i < padre1.size(); i ++) p1[padre1[i]] = p2[padre2[i]] = true;
+  //inicialización de padres
+  for (size_t i = 0; i < padre1.size(); i ++) p1[padre1[i]] = p2[padre2[i]] = true;
 
-    for (size_t i = 0; i < n; i ++) if (p2[i] != p1[i]) nodes_shuffle.push_back(p2[i]);
+  for (size_t i = 0; i < n; i ++) if (p2[i] != p1[i]) nodes_shuffle.push_back(p2[i]);
 
-    shuffle1 = shuffle2 = nodes_shuffle;
-    Random::shuffle(shuffle1);
-    Random::shuffle(shuffle2);
+  shuffle1 = shuffle2 = nodes_shuffle;
+  Random::shuffle(shuffle1);
+  Random::shuffle(shuffle2);
 
-    //asignación de valores a los hijos
-    for (size_t i = 0; i < n; i ++) {
-      //los valores comunes se mantienen en ambos
-      if (p2[i] == p1[i]) h1[i] = h2[i] = p2[i];
+  //asignación de valores a los hijos
+  for (size_t i = 0; i < n; i ++) {
+    //los valores comunes se mantienen en ambos
+    if (p2[i] == p1[i]) h1[i] = h2[i] = p2[i];
 
-      else { //el resto se reparte aleatoriamente
-        h1[i] = shuffle1.back();
-        shuffle1.pop_back();
+    else { //el resto se reparte aleatoriamente
+      h1[i] = shuffle1.back();
+      shuffle1.pop_back();
 
-        h2[i] = shuffle2.back();
-        shuffle2.pop_back();
-      }
-    }       
-
-    for (size_t i = 0; i < n; i ++) {
-      if (h1[i])  hijo1.push_back(i);
-      if (h2[i])  hijo2.push_back(i);
+      h2[i] = shuffle2.back();
+      shuffle2.pop_back();
     }
+  }       
 
-    poblacion_nueva.push_back(hijo1);
-    poblacion_nueva.push_back(hijo2);
+  for (size_t i = 0; i < n; i ++) {
+    if (h1[i])  hijo1.push_back(i);
+    if (h2[i])  hijo2.push_back(i);
   }
+
+  poblacion_nueva.push_back(hijo1);
+  poblacion_nueva.push_back(hijo2);
+}
 
 void OperadoresComunes::cruce_uniforme(const tSolution& padre1, const tSolution& padre2, 
                                     vector<tSolution> &poblacion_nueva) {
-    //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
-    vector<bool> p1 (n, false);
-    vector<bool> p2 (n, false);
-    vector<bool> h1 (n, false);
-    vector<bool> h2 (n, false);
-    tSolution hijo1, hijo2;
+  //almacenaré los padres y los hijos como vectores de booleanos durante el cruce
+  vector<bool> p1 (n, false);
+  vector<bool> p2 (n, false);
+  vector<bool> h1 (n, false);
+  vector<bool> h2 (n, false);
+  tSolution hijo1, hijo2;
 
-    bool hijo_a_elegir;
-    int tam = padre1.size();
+  bool hijo_a_elegir;
+  int tam = padre1.size();
 
-    //inicialización de padres    
-    for (size_t i = 0; i < tam; i ++) {
-      p1[padre1[i]] = true;
-      p2[padre2[i]] = true;
-    }
-    //asignación de valores a los hijos
-    for (size_t i = 0; i < n; i ++) {
-      //los valores comunes se mantienen en ambos
-      if (p2[i] == p1[i]) h1[i] = h2[i] = p2[i];
-      
-      else { //el resto se dividen de forma aleatoria
-        hijo_a_elegir = Random::get<bool>();
-
-        if (hijo_a_elegir) { h1[i] = p1[i]; h2[i] = p2[i];}
-        else               { h2[i] = p1[i]; h1[i] = p2[i];}
-      }
-    }
-
-    //reparación
-    int num_nodos_hijo1=0, num_nodos_hijo2=0;
-    for (size_t i=0; i<n; i++) {
-      num_nodos_hijo1 += (h1[i] - p1[i]);
-      num_nodos_hijo2 += (h2[i] - p1[i]);
-    }
-
-    reparar(num_nodos_hijo1, h1);
-    reparar(num_nodos_hijo2, h2);
-
-    for (size_t i = 0; i < n; i ++) {
-      if (h1[i])  hijo1.push_back(i);
-      if (h2[i])  hijo2.push_back(i);
-    }
-
-    poblacion_nueva.push_back(hijo1);
-    poblacion_nueva.push_back(hijo2);
+  //inicialización de padres    
+  for (size_t i = 0; i < tam; i ++) {
+    p1[padre1[i]] = true;
+    p2[padre2[i]] = true;
   }
+  //asignación de valores a los hijos
+  for (size_t i = 0; i < n; i ++) {
+    //los valores comunes se mantienen en ambos
+    if (p2[i] == p1[i]) h1[i] = h2[i] = p2[i];
+    
+    else { //el resto se dividen de forma aleatoria
+      hijo_a_elegir = Random::get<bool>();
+
+      if (hijo_a_elegir) { h1[i] = p1[i]; h2[i] = p2[i];}
+      else               { h2[i] = p1[i]; h1[i] = p2[i];}
+    }
+  }
+
+  //reparación
+  int num_nodos_hijo1=0, num_nodos_hijo2=0;
+  for (size_t i=0; i<n; i++) {
+    num_nodos_hijo1 += (h1[i] - p1[i]);
+    num_nodos_hijo2 += (h2[i] - p1[i]);
+  }
+
+  reparar(num_nodos_hijo1, h1);
+  reparar(num_nodos_hijo2, h2);
+
+  for (size_t i = 0; i < n; i ++) {
+    if (h1[i])  hijo1.push_back(i);
+    if (h2[i])  hijo2.push_back(i);
+  }
+
+  poblacion_nueva.push_back(hijo1);
+  poblacion_nueva.push_back(hijo2);
+}
 
 void OperadoresComunes::mutar(tSolution &cromosoma) {
-    set<size_t> posibles;
-    for (size_t i = 0; i < n; i ++) posibles.insert(i);
-    for (size_t i = 0; i < cromosoma.size(); i ++) posibles.erase(cromosoma[i]);
+  set<size_t> posibles;
+  for (size_t i = 0; i < n; i ++) posibles.insert(i);
+  for (size_t i = 0; i < cromosoma.size(); i ++) posibles.erase(cromosoma[i]);
 
-    size_t a_cambiar = Random::get<size_t>(0,cromosoma.size()-1);
-    size_t pos_nuevo_valor = Random::get<size_t>(0,posibles.size()-1);
+  size_t a_cambiar = Random::get<size_t>(0,cromosoma.size()-1);
+  size_t pos_nuevo_valor = Random::get<size_t>(0,posibles.size()-1);
 
-    auto it = posibles.begin();
-    advance(it, pos_nuevo_valor);
+  auto it = posibles.begin();
+  advance(it, pos_nuevo_valor);
 
-    cromosoma[a_cambiar] = *it;
-  }
+  cromosoma[a_cambiar] = *it;
+}
   
 tSolution OperadoresComunes::BL_rand(tSolution &solution, int maxevals, Problem *problem, size_t &evals){
   assert(maxevals > 0);

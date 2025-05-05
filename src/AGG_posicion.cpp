@@ -28,7 +28,7 @@ ResultMH AGG_posicion::optimize(Problem *problem, int maxevals){
   vector<tSolution> poblacion_nueva;
 
   tSolution peor_sol;
-  size_t peor_sol_index =0;
+  size_t peor_sol_index = 0;
   tSolution mejor_sol;
   tSolution mejor_sol_ant;
   tFitness fitness;
