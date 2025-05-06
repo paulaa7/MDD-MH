@@ -59,7 +59,6 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
       poblacion_nueva.reserve(50);
 
       //selección
-      tSolution sol1, sol2;
       size_t pos_aux1, pos_aux2;
       for (size_t i=0; i<poblacion.size(); i++) {
         pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
@@ -80,13 +79,14 @@ ResultMH AM_1::optimize(Problem *problem, int maxevals){
       size_t n_cruces = ceil(0.7 * (poblacion_sel.size()*0.5));
       size_t cruces = 0;
       size_t index = 0;
+
       while (cruces < n_cruces) {
         for (; index<poblacion_sel.size() && cruces < n_cruces; index+=2) {
-          if (index + 1 < poblacion_sel.size())
             cruce_uniforme(poblacion_sel[index], poblacion_sel[index+1], poblacion_nueva);
-          cruces ++;
+            cruces ++;
         }
       }
+
       for (; index<poblacion_sel.size(); index++)
         poblacion_nueva.push_back(poblacion_sel[index]);
 

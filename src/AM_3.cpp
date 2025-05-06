@@ -57,7 +57,6 @@ ResultMH AM_3::optimize(Problem *problem, int maxevals){
       poblacion_nueva.reserve(50);
 
       //selección
-      tSolution sol1, sol2;
       size_t pos_aux1, pos_aux2;
       for (size_t i=0; i<poblacion.size(); i++) {
         pos_aux1 = Random::get<size_t>(0,poblacion.size()-1);
