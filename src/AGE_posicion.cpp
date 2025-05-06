@@ -77,15 +77,12 @@ ResultMH AGE_posicion::optimize(Problem *problem, int maxevals){
       cruce_intercambio(poblacion_sel[0], poblacion_sel[1], poblacion_nueva);
 
       //mutación 
-      size_t n_mutaciones = ceil(0.1 * poblacion_sel.size());
-      size_t mutaciones = 0;
+      float mut1, mut2;
+      mut1 = Random::get<float>(0.0,1.0);
+      mut2 = Random::get<float>(0.0,1.0);
 
-      while (mutaciones < n_mutaciones) {
-        for (size_t i=0; i<poblacion_sel.size() && mutaciones < n_mutaciones; i++) {
-            mutar(poblacion_nueva[i]);
-            mutaciones ++;
-        }
-      }
+      if (mut1 <= 0.1) mutar(poblacion_nueva[0]);
+      if (mut2 <= 0.1) mutar(poblacion_nueva[1]);
 
       //averiguar qué hijo tiene mejor fitness
       mejor_hijo_reemplazo = poblacion_nueva[1];
