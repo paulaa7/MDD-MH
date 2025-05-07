@@ -15,12 +15,7 @@ class AGE_uniforme : public OperadoresComunes {
     
   public:
     AGE_uniforme() : OperadoresComunes() {}
-    virtual ~AGE_uniforme() {}
-
-    void cruce_uniforme(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);
-    void reparar(const int num_nodos, vector<bool> &hijo);
-    void mutar(tSolution &cromosoma);
-  
+    virtual ~AGE_uniforme() {}  
   
     /**
      * @param problem The problem to be optimized

@@ -13,6 +13,7 @@ CMakeFiles/main.dir/src/AGE_uniforme.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h /usr/include/assert.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGE_uniforme.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/OperadoresComunes.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/problem.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/solution.h \

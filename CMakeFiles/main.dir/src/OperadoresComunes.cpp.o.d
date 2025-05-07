@@ -1,5 +1,5 @@
-CMakeFiles/main.dir/src/AM_comun.cpp.o: \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/src/AM_comun.cpp \
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.o: \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/src/OperadoresComunes.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/cassert \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -12,7 +12,7 @@ CMakeFiles/main.dir/src/AM_comun.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h /usr/include/assert.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_comun.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/OperadoresComunes.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/problem.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/solution.h \

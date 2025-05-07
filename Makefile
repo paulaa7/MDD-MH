@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1461/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1463/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1461/bin/cmake -E rm -f
+RM = /snap/cmake/1463/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software"
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/snap/cmake/1461/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1463/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/snap/cmake/1461/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1463/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -328,30 +328,6 @@ src/AM_3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_3.cpp.s
 .PHONY : src/AM_3.cpp.s
 
-src/AM_comun.o: src/AM_comun.cpp.o
-.PHONY : src/AM_comun.o
-
-# target to build an object file
-src/AM_comun.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_comun.cpp.o
-.PHONY : src/AM_comun.cpp.o
-
-src/AM_comun.i: src/AM_comun.cpp.i
-.PHONY : src/AM_comun.i
-
-# target to preprocess a source file
-src/AM_comun.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_comun.cpp.i
-.PHONY : src/AM_comun.cpp.i
-
-src/AM_comun.s: src/AM_comun.cpp.s
-.PHONY : src/AM_comun.s
-
-# target to generate assembly for a file
-src/AM_comun.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/AM_comun.cpp.s
-.PHONY : src/AM_comun.cpp.s
-
 src/MDD.o: src/MDD.cpp.o
 .PHONY : src/MDD.o
 
@@ -375,6 +351,30 @@ src/MDD.s: src/MDD.cpp.s
 src/MDD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/MDD.cpp.s
 .PHONY : src/MDD.cpp.s
+
+src/OperadoresComunes.o: src/OperadoresComunes.cpp.o
+.PHONY : src/OperadoresComunes.o
+
+# target to build an object file
+src/OperadoresComunes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/OperadoresComunes.cpp.o
+.PHONY : src/OperadoresComunes.cpp.o
+
+src/OperadoresComunes.i: src/OperadoresComunes.cpp.i
+.PHONY : src/OperadoresComunes.i
+
+# target to preprocess a source file
+src/OperadoresComunes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/OperadoresComunes.cpp.i
+.PHONY : src/OperadoresComunes.cpp.i
+
+src/OperadoresComunes.s: src/OperadoresComunes.cpp.s
+.PHONY : src/OperadoresComunes.s
+
+# target to generate assembly for a file
+src/OperadoresComunes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/OperadoresComunes.cpp.s
+.PHONY : src/OperadoresComunes.cpp.s
 
 src/brutesearch.o: src/brutesearch.cpp.o
 .PHONY : src/brutesearch.o
@@ -554,12 +554,12 @@ help:
 	@echo "... src/AM_3.o"
 	@echo "... src/AM_3.i"
 	@echo "... src/AM_3.s"
-	@echo "... src/AM_comun.o"
-	@echo "... src/AM_comun.i"
-	@echo "... src/AM_comun.s"
 	@echo "... src/MDD.o"
 	@echo "... src/MDD.i"
 	@echo "... src/MDD.s"
+	@echo "... src/OperadoresComunes.o"
+	@echo "... src/OperadoresComunes.i"
+	@echo "... src/OperadoresComunes.s"
 	@echo "... src/brutesearch.o"
 	@echo "... src/brutesearch.i"
 	@echo "... src/brutesearch.s"

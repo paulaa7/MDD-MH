@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1461/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1463/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1461/bin/cmake -E rm -f
+RM = /snap/cmake/1463/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -184,24 +184,10 @@ CMakeFiles/main.dir/src/AM_3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AM_3.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_3.cpp" -o CMakeFiles/main.dir/src/AM_3.cpp.s
 
-CMakeFiles/main.dir/src/AM_comun.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/AM_comun.cpp.o: src/AM_comun.cpp
-CMakeFiles/main.dir/src/AM_comun.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/AM_comun.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/AM_comun.cpp.o -MF CMakeFiles/main.dir/src/AM_comun.cpp.o.d -o CMakeFiles/main.dir/src/AM_comun.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_comun.cpp"
-
-CMakeFiles/main.dir/src/AM_comun.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/AM_comun.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_comun.cpp" > CMakeFiles/main.dir/src/AM_comun.cpp.i
-
-CMakeFiles/main.dir/src/AM_comun.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/AM_comun.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/AM_comun.cpp" -o CMakeFiles/main.dir/src/AM_comun.cpp.s
-
 CMakeFiles/main.dir/src/MDD.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/MDD.cpp.o: src/MDD.cpp
 CMakeFiles/main.dir/src/MDD.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/src/MDD.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/MDD.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/MDD.cpp.o -MF CMakeFiles/main.dir/src/MDD.cpp.o.d -o CMakeFiles/main.dir/src/MDD.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/MDD.cpp"
 
 CMakeFiles/main.dir/src/MDD.cpp.i: cmake_force
@@ -211,6 +197,20 @@ CMakeFiles/main.dir/src/MDD.cpp.i: cmake_force
 CMakeFiles/main.dir/src/MDD.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/MDD.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/MDD.cpp" -o CMakeFiles/main.dir/src/MDD.cpp.s
+
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.o: src/OperadoresComunes.cpp
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/src/OperadoresComunes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/OperadoresComunes.cpp.o -MF CMakeFiles/main.dir/src/OperadoresComunes.cpp.o.d -o CMakeFiles/main.dir/src/OperadoresComunes.cpp.o -c "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/OperadoresComunes.cpp"
+
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/OperadoresComunes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/OperadoresComunes.cpp" > CMakeFiles/main.dir/src/OperadoresComunes.cpp.i
+
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/OperadoresComunes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/paula/Escritorio/cuatri 2 24-25/mh/p2/software/src/OperadoresComunes.cpp" -o CMakeFiles/main.dir/src/OperadoresComunes.cpp.s
 
 CMakeFiles/main.dir/src/brutesearch.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/brutesearch.cpp.o: src/brutesearch.cpp
@@ -306,8 +306,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/AM_1.cpp.o" \
 "CMakeFiles/main.dir/src/AM_2.cpp.o" \
 "CMakeFiles/main.dir/src/AM_3.cpp.o" \
-"CMakeFiles/main.dir/src/AM_comun.cpp.o" \
 "CMakeFiles/main.dir/src/MDD.cpp.o" \
+"CMakeFiles/main.dir/src/OperadoresComunes.cpp.o" \
 "CMakeFiles/main.dir/src/brutesearch.cpp.o" \
 "CMakeFiles/main.dir/src/greedy.cpp.o" \
 "CMakeFiles/main.dir/src/localsearch_heur.cpp.o" \
@@ -326,8 +326,8 @@ main: CMakeFiles/main.dir/src/AGG_uniforme.cpp.o
 main: CMakeFiles/main.dir/src/AM_1.cpp.o
 main: CMakeFiles/main.dir/src/AM_2.cpp.o
 main: CMakeFiles/main.dir/src/AM_3.cpp.o
-main: CMakeFiles/main.dir/src/AM_comun.cpp.o
 main: CMakeFiles/main.dir/src/MDD.cpp.o
+main: CMakeFiles/main.dir/src/OperadoresComunes.cpp.o
 main: CMakeFiles/main.dir/src/brutesearch.cpp.o
 main: CMakeFiles/main.dir/src/greedy.cpp.o
 main: CMakeFiles/main.dir/src/localsearch_heur.cpp.o

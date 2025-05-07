@@ -18,11 +18,6 @@ public:
   AGG_posicion() : OperadoresComunes() {}
   virtual ~AGG_posicion() {}
 
-  void cruce_intercambio(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);
-  void reparar(const size_t num_nodos, vector<bool> &hijo);
-  void mutar(tSolution &gen);
-
-
   /**
    * @param problem The problem to be optimized
    * @param maxevals Maximum number of evaluations allowed

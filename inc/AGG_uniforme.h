@@ -18,11 +18,6 @@ public:
   AGG_uniforme() : OperadoresComunes() {}
   virtual ~AGG_uniforme() {}
 
-  void cruce_uniforme(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);
-  void reparar(const int num_nodos, vector<bool> &hijo);
-  void mutar(tSolution &cromosoma);
-
-
   /**
    * @param problem The problem to be optimized
    * @param maxevals Maximum number of evaluations allowed

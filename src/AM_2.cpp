@@ -103,10 +103,9 @@ ResultMH AM_2::optimize(Problem *problem, int maxevals){
         //aplicacion de BL random
         size_t n_busquedas = ceil(0.1 * poblacion_nueva.size());
         size_t busquedas = 0;
-        index = 0;
+        index = Random::get<size_t>(0,poblacion_nueva.size()-1);
         while (busquedas < n_busquedas) {
             poblacion_nueva[index] = BL_rand(poblacion_nueva[index], 400, problem, evals);
-            index ++;
             busquedas ++;
         }
       }

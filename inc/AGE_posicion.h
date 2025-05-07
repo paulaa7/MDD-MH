@@ -15,12 +15,7 @@ class AGE_posicion : public OperadoresComunes {
     
   public:
     AGE_posicion() : OperadoresComunes() {}
-    virtual ~AGE_posicion() {}
-  
-    void cruce_intercambio(const tSolution& padre1, const tSolution& padre2, vector<tSolution> &poblacion_nueva);
-    void reparar(const size_t num_nodos, vector<bool> &hijo);
-    void mutar(tSolution &gen);
-  
+    virtual ~AGE_posicion() {}  
   
     /**
      * @param problem The problem to be optimized

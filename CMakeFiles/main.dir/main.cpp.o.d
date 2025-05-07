@@ -212,15 +212,12 @@ CMakeFiles/main.dir/main.cpp.o: \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/util.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/MDD.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/../common/problem.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/greedy.h \
+ /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/OperadoresComunes.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/common/mh.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/localsearch_heur.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/localsearch_rand.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGG_posicion.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGG_uniforme.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGE_posicion.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AGE_uniforme.h \
- /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_comun.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_1.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_2.h \
  /home/paula/Escritorio/cuatri\ 2\ 24-25/mh/p2/software/inc/AM_3.h

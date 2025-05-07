@@ -10,8 +10,8 @@ main: \
   CMakeFiles/main.dir/src/AM_1.cpp.o \
   CMakeFiles/main.dir/src/AM_2.cpp.o \
   CMakeFiles/main.dir/src/AM_3.cpp.o \
-  CMakeFiles/main.dir/src/AM_comun.cpp.o \
   CMakeFiles/main.dir/src/MDD.cpp.o \
+  CMakeFiles/main.dir/src/OperadoresComunes.cpp.o \
   CMakeFiles/main.dir/src/brutesearch.cpp.o \
   CMakeFiles/main.dir/src/greedy.cpp.o \
   CMakeFiles/main.dir/src/localsearch_heur.cpp.o \
@@ -69,9 +69,9 @@ CMakeFiles/main.dir/src/AM_2.cpp.o:
 
 CMakeFiles/main.dir/src/AM_3.cpp.o:
 
-CMakeFiles/main.dir/src/AM_comun.cpp.o:
-
 CMakeFiles/main.dir/src/MDD.cpp.o:
+
+CMakeFiles/main.dir/src/OperadoresComunes.cpp.o:
 
 CMakeFiles/main.dir/src/brutesearch.cpp.o:
 
